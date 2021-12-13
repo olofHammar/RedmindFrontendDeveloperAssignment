@@ -3,6 +3,8 @@ import Modal from "@material-ui/core/Modal";
 import { Backdrop } from "@material-ui/core";
 import Slide from "@material-ui/core/Slide";
 import { makeStyles } from "@material-ui/core/styles";
+import { loadImage } from "../imageLoader";
+import "../styles/detailModal.css";
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -18,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     height: "90%",
     position: "absolute",
     overflowY: "scroll",
+    outline: "none",
     bottom: 0,
     right: 0,
     color: "white",
@@ -30,7 +33,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ContentModal({ children }) {
+export default function DetailModal({
+  children,
+  name,
+  height,
+  mass,
+  hairColor,
+  skinColor,
+  eyeColor,
+  birthYear,
+  homeWorld,
+  imageIndex,
+}) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
@@ -66,7 +80,37 @@ export default function ContentModal({ children }) {
         }}
       >
         <Slide in={open} transition={Slide} direction="up" timeout={500}>
-          <div className={classes.paper} id="modalContainer"></div>
+          <div className={classes.paper} id="modalContainer">
+            <img className="modal-image" src={loadImage(imageIndex)} />
+            <div className="info-container">
+              <h1>{name}</h1>
+              <h4>
+                <span>Height: </span>
+                {height}
+              </h4>
+              <h4>
+                <span>Mass: </span>
+                {mass}
+              </h4>
+              <h4>
+                <span>Hair Color: </span>
+                {hairColor}
+              </h4>
+              <h4>
+                <span>Skin Color: </span>
+                {skinColor}
+              </h4>
+              <h4>
+                <span>Eye Color: </span>
+                {eyeColor}
+              </h4>
+              <h4>
+                <span>Birth Year: </span>
+                {birthYear}
+              </h4>
+            </div>
+            <button className="btn-close-modal" onClick={handleClose}>X</button>
+          </div>
         </Slide>
       </Modal>
     </>
