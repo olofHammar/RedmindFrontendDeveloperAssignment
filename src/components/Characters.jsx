@@ -11,7 +11,9 @@ function Characters() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const getCharacters = () => {
-    console.log(pageNumber);
+    if (characters.length > 25) {
+      return;
+    }
 
     api.get("?page=" + pageNumber.toString()).then((response) => {
       setTempList([...tempList, response.data.results]);
@@ -19,9 +21,8 @@ function Characters() {
         setPageNumber(pageNumber + 1);
       } else {
         let flattenedArray = tempList.reduce((a, b) => a.concat(b), []);
-        
+
         setCharacters(flattenedArray);
-        console.log(characters);
       }
     });
   };
@@ -46,12 +47,10 @@ function Characters() {
           <>
             {characters
               .filter((val) => {
-                if ((searchTerm == "")) {
+                if (searchTerm == "") {
                   return val;
                 } else if (
-                  val.name
-                    .toLowerCase()
-                    .includes(searchTerm.toLowerCase())
+                  val.name.toLowerCase().includes(searchTerm.toLowerCase())
                 ) {
                   return val;
                 }
@@ -68,10 +67,15 @@ function Characters() {
                     birthYear={character.birth_year}
                     homeWorld={character.homeworld}
                     imageIndex={i}
-                    searchTerm={searchTerm}
+                    searchTerm={searchTerm.toLocaleLowerCase()}
                     key={i}
                   >
-                    <Profile name={character.name} imageIndex={i} key={i} searchTerm={searchTerm} />
+                    <Profile
+                      name={character.name}
+                      imageIndex={i}
+                      key={i}
+                      searchTerm={searchTerm.toLocaleLowerCase()}
+                    />
                   </DetailModal>
                 );
               })}

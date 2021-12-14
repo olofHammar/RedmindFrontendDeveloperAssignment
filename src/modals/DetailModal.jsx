@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Modal from "@material-ui/core/Modal";
 import { Backdrop } from "@material-ui/core";
 import Slide from "@material-ui/core/Slide";
@@ -81,7 +81,10 @@ export default function DetailModal({
       >
         <Slide in={open} transition={Slide} direction="up" timeout={500}>
           <div className={classes.paper} id="modalContainer">
-            <img className="modal-image" src={loadImage(imageIndex, searchTerm)} />
+            <img
+              className="modal-image"
+              src={loadImage(imageIndex, searchTerm)}
+            />
             <div className="info-container">
               <h1>{name}</h1>
               <h4>
@@ -109,7 +112,9 @@ export default function DetailModal({
                 {birthYear}
               </h4>
             </div>
-            <button className="btn-close-modal" onClick={handleClose}>X</button>
+            <button className="btn-close-modal" onClick={handleClose}>
+              X
+            </button>
           </div>
         </Slide>
       </Modal>

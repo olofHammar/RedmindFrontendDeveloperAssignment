@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "../styles/profile.css";
 import { loadImage } from "../imageLoader";
 import { Paper } from "@material-ui/core";
 
 function Profile({ name, imageIndex, searchTerm }) {
-
   useEffect(() => {
-    console.log(searchTerm)
-  }, [])
+    console.log(searchTerm);
+  }, []);
 
   return (
     <Paper className="profile-container">

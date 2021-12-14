@@ -4,7 +4,12 @@
   align-items: center;
   width: 100vw;
   height: 100px;
-  background: linear-gradient(1turn, rgb(0, 0, 0),rgb(11, 11, 17), rgb(11, 11, 17));
+  background: linear-gradient(
+    1turn,
+    rgb(0, 0, 0),
+    rgb(11, 11, 17),
+    rgb(11, 11, 17)
+  );
   color: white;
 }
 
