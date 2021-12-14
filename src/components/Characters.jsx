@@ -68,6 +68,7 @@ function Characters() {
                     birthYear={character.birth_year}
                     homeWorld={character.homeworld}
                     imageIndex={i}
+                    searchTerm={searchTerm}
                     key={i}
                   >
                     <Profile name={character.name} imageIndex={i} key={i} searchTerm={searchTerm} />

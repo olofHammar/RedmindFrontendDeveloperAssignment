@@ -42,12 +42,11 @@ export default function DetailModal({
   skinColor,
   eyeColor,
   birthYear,
-  homeWorld,
+  searchTerm,
   imageIndex,
 }) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
-  const searchTerm = "";
 
   const handleOpen = () => {
     setOpen(true);
