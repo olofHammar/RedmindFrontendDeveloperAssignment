@@ -47,6 +47,7 @@ export default function DetailModal({
 }) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
+  const searchTerm = "";
 
   const handleOpen = () => {
     setOpen(true);
@@ -81,7 +82,7 @@ export default function DetailModal({
       >
         <Slide in={open} transition={Slide} direction="up" timeout={500}>
           <div className={classes.paper} id="modalContainer">
-            <img className="modal-image" src={loadImage(imageIndex)} />
+            <img className="modal-image" src={loadImage(imageIndex, searchTerm)} />
             <div className="info-container">
               <h1>{name}</h1>
               <h4>

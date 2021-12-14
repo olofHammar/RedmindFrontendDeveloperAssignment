@@ -1,24 +1,56 @@
 .header-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: 100px;
-  background: linear-gradient(1turn, rgb(5, 8, 20), #000);
+  background: linear-gradient(1turn, rgb(0, 0, 0),rgb(11, 11, 17), rgb(11, 11, 17));
   color: white;
 }
 
-.logo-image {
-  height: 100%;
-  object-fit: cover;
-  padding: 10px;
+.logo-container {
+  width: 20%;
+  justify-content: flex-start;
+  margin: 0;
+  margin-right: 80px;
 }
 
-.search-input {
-  flex: 1;
-  height: 50%;
+.header-logo {
+  height: 100px;
+  object-fit: contain;
 }
 
-.placeholder {
-  flex: 1;
+.header-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.header-title-container p {
+  font-weight: 700;
+  text-align: center;
+  font-size: 35px;
+  font-family: Hack, sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, rgb(0, 0, 0), rgb(228, 201, 144), #000);
+  letter-spacing: 5px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 5s linear infinite;
+  position: relative;
+}
+
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
 }
