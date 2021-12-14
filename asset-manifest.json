@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/RedmindFrontendDeveloperAssignment/static/css/main.2bd77277.chunk.css",
+    "main.js": "/RedmindFrontendDeveloperAssignment/static/js/main.83b4e619.chunk.js",
+    "main.js.map": "/RedmindFrontendDeveloperAssignment/static/js/main.83b4e619.chunk.js.map",
+    "runtime-main.js": "/RedmindFrontendDeveloperAssignment/static/js/runtime-main.8fa26f18.js",
+    "runtime-main.js.map": "/RedmindFrontendDeveloperAssignment/static/js/runtime-main.8fa26f18.js.map",
+    "static/js/2.18fccfd2.chunk.js": "/RedmindFrontendDeveloperAssignment/static/js/2.18fccfd2.chunk.js",
+    "static/js/2.18fccfd2.chunk.js.map": "/RedmindFrontendDeveloperAssignment/static/js/2.18fccfd2.chunk.js.map",
+    "static/js/3.68254eb2.chunk.js": "/RedmindFrontendDeveloperAssignment/static/js/3.68254eb2.chunk.js",
+    "static/js/3.68254eb2.chunk.js.map": "/RedmindFrontendDeveloperAssignment/static/js/3.68254eb2.chunk.js.map",
+    "index.html": "/RedmindFrontendDeveloperAssignment/index.html",
+    "static/css/main.2bd77277.chunk.css.map": "/RedmindFrontendDeveloperAssignment/static/css/main.2bd77277.chunk.css.map",
+    "static/js/2.18fccfd2.chunk.js.LICENSE.txt": "/RedmindFrontendDeveloperAssignment/static/js/2.18fccfd2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8fa26f18.js",
+    "static/js/2.18fccfd2.chunk.js",
+    "static/css/main.2bd77277.chunk.css",
+    "static/js/main.83b4e619.chunk.js"
+  ]
+}
